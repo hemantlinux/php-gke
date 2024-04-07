@@ -1,0 +1,61 @@
+apiVersion: mariadb.mmontes.io/v1alpha1
+kind: MariaDB
+metadata:
+  name: mariadb-galera
+spec:
+  rootPasswordSecretKeyRef:
+    name: mariadb
+    key: root-password
+  volumeClaimTemplate:    
+        resources:
+          requests:
+            storage: 3G
+        storageClassName: "galera-staging"    
+        volumeMode : Filesystem    
+        accessModes:
+          - ReadWriteOnce  
+
+  replicas: 2
+
+  galera:
+    enabled: true  
+    volumeClaimTemplate:
+      accessModes:
+      - ReadWriteOnce
+      storageClassName: "galera-staging"
+      volumeMode : Filesystem
+      resources:
+        requests:
+          storage: 1G
+  podSecurityContext:
+    runAsUser: 0            
+
+  service:
+    type: LoadBalancer
+    annotations:
+      networking.gke.io/load-balancer-type: "Internal"
+      loadBalancerIP: 10.100.0.100  
+
+  primaryService:
+    type: LoadBalancer
+    annotations:
+      networking.gke.io/load-balancer-type: "Internal"
+      loadBalancerIP: 10.100.0.101
+
+  secondaryService:
+    type: LoadBalancer
+    annotations:
+      networking.gke.io/load-balancer-type: "Internal"
+      loadBalancerIP: 10.100.0.102
+
+
+  metrics:
+    enabled: true
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: mariadb
+type: Opaque
+stringData:
+  root-password: mariadb    

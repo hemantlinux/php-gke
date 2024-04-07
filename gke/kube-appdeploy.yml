@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lamp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: lamp-app
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 2
+      maxUnavailable: 1
+  template:
+    metadata:
+      labels:
+        app: lamp-app
+    spec:
+      containers:
+        - name: lamp-app
+          image: hemantlinux2010/gke:1.5
+          ports:
+            - containerPort: 80
+          imagePullPolicy: Always  
+          env:
+            - name: DB_HOST
+              value: "mariadb-galera"
+            - name: DB_NAME
+              value: "lamp"
+            - name: DB_USER
+              value: "root"
+            - name: DB_PASS
+              value: "mariadb"
+            - name: BASE_URL
+              value: lamp.example.com
+            - name: TZ
+              value: Asia/Kolkata
