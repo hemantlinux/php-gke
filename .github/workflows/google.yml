@@ -45,8 +45,8 @@ jobs:
       uses: 'google-github-actions/auth@v2'
       with:
         token_format: 'access_token'
-        workload_identity_provider: 'projects/949017100922/locations/global/workloadIdentityPools/github-pool/providers/my-provider'
-        service_account: 'github@gke-cluster-419311.iam.gserviceaccount.com'
+        workload_identity_provider: 'projects/949017100922/locations/global/workloadIdentityPools/github-wif-pool/providers/githubwif'
+        service_account: 'test-wif1@gke-cluster-419311.iam.gserviceaccount.com'
 
     # Alternative option - authentication via credentials json
     # - id: 'auth'
