@@ -20,7 +20,7 @@ env:
   PROJECT_ID: gke-cluster-419311
   GAR_LOCATION: asia-south1 # TODO: update region of the Artifact Registry
   GKE_CLUSTER: autopilot-cluster-1    # TODO: update to cluster name
-  GKE_ZONE: asia-south1-a   # TODO: update to cluster zone
+  GKE_ZONE: asia-south1-b   # TODO: update to cluster zone
   DEPLOYMENT_NAME: lamp # TODO: update to deployment name
   REPOSITORY: hemantlinux2010 # TODO: update to Artifact Registry docker repository
   IMAGE: gke
