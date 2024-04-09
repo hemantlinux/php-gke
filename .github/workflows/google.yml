@@ -46,7 +46,7 @@ jobs:
       with:
         token_format: 'access_token'
         workload_identity_provider: 'projects/949017100922/locations/global/workloadIdentityPools/github-wif-pool/providers/githubwif'
-        service_account: 'test-wif3@gke-cluster-419311.iam.gserviceaccount.com'
+        service_account: 'test-wif5@gke-cluster-419311.iam.gserviceaccount.com'
 
     # Alternative option - authentication via credentials json
     # - id: 'auth'
