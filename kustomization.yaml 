@@ -3,4 +3,4 @@ kind: Kustomization
 commonLabels:
     app: lamp
 resources: 
-    - kude-appdeploy.yml  
+    - kube-appdeploy.yml  
