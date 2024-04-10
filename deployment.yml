@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: lamp-app
-          image: hemantlinux2010/gke:1.5
+          image: asia-south1-docker.pkg.dev/gke-cluster-419311/hemantlinux2010/gke
           ports:
             - containerPort: 80
           imagePullPolicy: Always  
