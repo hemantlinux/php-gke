@@ -5,10 +5,4 @@ commonLabels:
 resources:
 - deployment.yml
 - service.yml
-images:
-- name: asia-south1-docker.pkg.dev/gke-cluster-419311/hemantlinux2010/gke
-  newName: asia-south1-docker.pkg.dev./gke-cluster-419311/hemantlinux2010/gke
-  newTag: 286143f9dc18
-- name: hemantlinux2010/gke
-  newName: asia-south1-docker.pkg.dev/gke-cluster-419311/hemantlinux2010/gke
-  newTag: 286143f9dc18
+
