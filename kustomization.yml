@@ -3,9 +3,12 @@ kind: Kustomization
 commonLabels:
   app: lamp
 resources:
-  - deployment.yml
-  - service.yml
+- deployment.yml
+- service.yml
 images:
-- name: LOCATION-docker.pkg.dev/gke-cluster-419311/hemantlinux2010/gke:9eb6016418e09
-  newName: asia-south1-docker.pkg.dev./gke-cluster-419311/hemantlinux2010/gke:9eb6016418e09
-  newTag: 9eb6016418e09
+- name: asia-south1-docker.pkg.dev/gke-cluster-419311/hemantlinux2010/gke
+  newName: asia-south1-docker.pkg.dev./gke-cluster-419311/hemantlinux2010/gke
+  newTag: 286143f9dc18
+- name: hemantlinux2010/gke
+  newName: asia-south1-docker.pkg.dev/gke-cluster-419311/hemantlinux2010/gke
+  newTag: 286143f9dc18
