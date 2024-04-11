@@ -26,7 +26,7 @@ include("./php/config.php");
 <head>
 
     <!-- Enter a proper page title here -->
-    <title>BULKDATABASE PROVIDER</title>
+    <title>BULKDATABASE PROVIDER Prod</title>
 
     <!-- CSS to include bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
