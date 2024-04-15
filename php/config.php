@@ -1,8 +1,8 @@
 <?php
 
 $db_host = getenv("DB_HOST");
-$user = getenv("USER");
-$pass = getenv("PASS");
+$user = getenv("DB_USER");
+$pass = getenv("DB_PASS");
 $db_name = getenv("DB_NAME");
   
   // enter your connection string for database here
