@@ -5,13 +5,13 @@
 //         $dotenv = Dotenv::createImmutable(__DIR__);
 //         $dotenv->load();
 
-// $db_host = getenv("db_host");
-// $user = getenv("user");
-// $pass = getenv("pass");
-// $db_name = getenv("db_name");
+$db_host = getenv("db_host");
+$user = getenv("user");
+$pass = getenv("pass");
+$db_name = getenv("db_name");
   
   // enter your connection string for database here
-  $conn= new mysqli("127.0.0.1","php","php123@","php");
+  $conn= new mysqli("$db_host","$user","$pass","$db_name");
    
   if($conn->connect_error){
       die("connection Failed" .$conn->connect_error);
