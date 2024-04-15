@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 include("./php/config.php");
   if (array_key_exists("logout", $_GET)) {
       // check logout value 1 or not
@@ -17,8 +16,7 @@ include("./php/config.php");
       //        $_COOKIE["id"] = "";  
       // destroy cookie and session
           }
- 
-        
+       
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,7 +24,7 @@ include("./php/config.php");
 <head>
 
     <!-- Enter a proper page title here -->
-    <title>BULKDATABASE PROVIDER </title>
+    <title>BULKDATABASE PROVIDER  </title>
 
     <!-- CSS to include bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -359,8 +357,10 @@ include("./php/config.php");
 
         #slider-button {
             height: 40px;
-            width: 100px;
+            width: 174px;
             background-color: black;
+            border-radius : 10px;
+            letter-spacing : 6px;
             color: white;
             border: 2px solid white;
             margin: 10px;
@@ -451,13 +451,13 @@ include("./php/config.php");
 
         #slider2-button {
             height: 40px;
-            width: 120px;
-            background-color: pink;
+            width: 174px;
+            background-color: black;
+            border-radius : 10px;
+            letter-spacing : 6px;
             color: white;
-            border: 2px solid #24436e;
+            border: 2px solid white;
             margin: 10px;
-            color: #24436e;
-            font-weight: bold;
         }
 
         #slider2-button:hover {
@@ -951,7 +951,39 @@ include("./php/config.php");
 <body>
 
     <div class="d-none d-lg-block">
-        <div id="header-desktop"></div>
+        <!-- <div id="header-desktop"></div> -->        
+        <div id="header-desktop"> <!-- header -->
+ <!-- $db_host = getenv("127.0.0.1");
+$user = getenv("php");
+$pass = getenv("php123@");
+$db_name = getenv("php"); -->  
+  <div id="top-bar" class="container-fluid">
+    <div id="top-bar-center" class="container-sm">
+        <div id="top-bar-left" class="container-sm">
+            <p class="font-Lato-Regular">
+                SAVE 25% USE COUPON : <u>SLAT25</u>
+            </p>
+            
+        </div>
+        hello world
+        <div id="top-bar-right" class="container-sm">
+
+
+                        <a href="signup" class="font-Lato-Regular">signup</a>
+            
+
+
+            <a href="about.php" role="button" class="font-Lato-Regular">About us</a>
+            <a href="contact" role="button" class="font-Lato-Regular">Contace us</a>
+            <!-- <a id="shop" href="#" role="button" class="font-Lato-Regular">Shop</a> -->
+        </div>
+    </div>
+</div>
+<div id="c"></div>
+
+   
+
+</div>
         <!-- Enter code for desktop UI here -->
         <div id="c"></div>
 
