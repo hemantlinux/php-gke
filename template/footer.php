@@ -53,7 +53,7 @@
                 <p class="font-Lato-Regular">Copyright 2020 © Data Export</p>
             </div>
             <div id="foot-mid-right" class="container">
-                <img src="./img/foot.PNG">
+                <img src="./images/paytm.png">
             </div>
         </div>
     </div>
