@@ -1,9 +1,4 @@
 <?php
-    // require_once realpath(__DIR__ . "../vendor/autoload.php");
-//     require __DIR__ . '/vendor/autoload'; 
-//     use Dotenv\Dotenv;
-//         $dotenv = Dotenv::createImmutable(__DIR__);
-//         $dotenv->load();
 
 $db_host = getenv("db_host");
 $user = getenv("user");
@@ -19,11 +14,4 @@ $db_name = getenv("db_name");
   
   // razorpay test key
   $rzp_key = "ENTER_YOUR_RAZORPAY_KEY_HERE";
-
-  
-?>
-<!-- $db_host = getenv("127.0.0.1");
-$user = getenv("php");
-$pass = getenv("php123@");
-$db_name = getenv("php"); -->
 
